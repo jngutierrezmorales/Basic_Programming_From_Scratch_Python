@@ -1,2 +1,2 @@
 # Python
-Curso iniciación a la programación con Python de Nate Academy
+Curso Iniciación a la programación con Python de Nate Academy
