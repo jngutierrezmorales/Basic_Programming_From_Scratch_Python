@@ -40,3 +40,5 @@ Curso Iniciación a la programación con Python de Nate Academy:
 19- Clases y Objetos: Entendiendo Instancias y Herencia
 
 20- El combate pokemon orientado a objetos
+
+21- Empezando el Blackjack
