@@ -42,3 +42,5 @@ Curso Iniciación a la programación con Python de Nate Academy:
 20- El combate pokemon orientado a objetos
 
 21- Empezando el Blackjack
+
+22- Blackjack: List comprehension y magic methods
