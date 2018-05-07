@@ -46,3 +46,5 @@ Curso Iniciación a la programación con Python de Nate Academy:
 22- Blackjack: List comprehension y magic methods
 
 23- Blackjack: Implementando el juego
+
+24- Añadiendo jugadores a Blackjack
