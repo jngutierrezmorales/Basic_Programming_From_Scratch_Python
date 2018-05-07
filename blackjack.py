@@ -1,5 +1,6 @@
 
 
+
 class Card:
     def __init__(self, number, suit):
         self.number = number
@@ -52,10 +53,15 @@ class Game:
         13: 10
     }
 
+    n_players = 2
+
     def __init__(self):
-        self.deck = Deck()
-        self.player = Player("Player")
+        self.players = []
         self.table_cards = []
+        self.deck = Deck()
+
+    def ask_player_name(self, player_n):
+        return input("¿Cuál es el nombre del jugador {}? ".format(player_n))
 
     def draft_card(self):
         card = self.deck.give_random_card()
@@ -75,19 +81,37 @@ class Game:
         response = input("¿Quieres otra carta? (Y/N)")
         return response == "Y"
 
+    def start_turn(self, player):
+        self.table_cards = []
+        self.deck = Deck()
+        print("Turno del jugador {}\n\n".format(player.name))
+
     def run(self):
-        user_continue = True
+        for i in range(self.n_players):
+            self.players.append(Player(self.ask_player_name(i + 1)))
 
-        while user_continue and self.count_table_cards() < 21:
-            self.draft_card()
-            user_continue = self.player_wants_to_continue()
+        winner_score = 0
+        winner = None
 
-        score = self.count_table_cards()
-        print("Tu puntuación es de {}".format(score))
+        for player in self.players:
+            self.start_turn(player)
 
-        if score > 21:
-            print("Has perdido")
+            user_continue = True
 
+            while user_continue and self.count_table_cards() < 21:
+                self.draft_card()
+                user_continue = self.player_wants_to_continue()
+
+            player.score = self.count_table_cards()
+            print("Tu puntuación es de {}".format(player.score))
+
+            if player.score > 21:
+                print("Has perdido")
+            elif(player.score > winner_score):
+                winner_score = player.score
+                winner = player
+
+        print("El ganador es {}".format(winner.name))
 
 if __name__ == "__main__":
     blackjack = Game()
