@@ -2,7 +2,6 @@
 
 ### Curso Iniciación a la programación con Python de Nate Academy:
 
-#### Repositorio de las imágenes de las cartas: https://github.com/hayeah/playing-cards-assets
 ```
 1- Instalando todo lo necesario
 
@@ -54,3 +53,4 @@
 
 25- Creando la UI del Blackjack
 ```
+#### Repositorio de las imágenes de las cartas: https://github.com/hayeah/playing-cards-assets
