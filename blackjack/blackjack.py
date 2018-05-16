@@ -1,29 +1,48 @@
+import random
+from tkinter import Tk, ttk
 
+from PIL import ImageTk, Image
 
 
 class Card:
+    number_name_mapping = {
+        1: "ace",
+        11: "jack",
+        12: "queen",
+        13: "king"
+    }
+    card_image_path = "./playing-cards-assets-master/png/"
+
     def __init__(self, number, suit):
         self.number = number
         self.suit = suit
+        self.tk_img = ImageTk.PhotoImage(Image.open(self.get_card_image_path()))
+
+    def get_card_image_path(self):
+        return"{}{}_of_{}.png".format(self.card_image_path, self.number_name_mapping.get(self.number, self.number),
+                                      self.suit)
 
     def __str__(self):
         return "{} of {}".format(self.number, self.suit)
 
 
 class Deck:
-    suits = ["diamonds", "heart", "spades", "clubs"]
+    suits = ["diamonds", "hearts", "spades", "clubs"]
     max_number = 13
 
     def __init__(self):
         self.cards = []
+        self.used_cards = []
 
         for suit in self.suits:
             for number in range(1, self.max_number + 1):
                 self.cards.append(Card(number, suit))
 
     def give_random_card(self):
-        pos = 0
-        return self.cards.pop(pos)
+        pos = random.randint(0, len(self.cards))
+        chosen_card = self.cards.pop(pos-1)
+        self.used_cards.append(chosen_card)
+        return chosen_card
 
     def __str__(self):
         str_cards = [str(card) for card in self.cards]
@@ -58,6 +77,7 @@ class Game:
     def __init__(self):
         self.players = []
         self.table_cards = []
+        self.ui_root = Tk()
         self.deck = Deck()
 
     def ask_player_name(self, player_n):
@@ -87,6 +107,16 @@ class Game:
         print("Turno del jugador {}\n\n".format(player.name))
 
     def run(self):
+        card_frame = ttk.Frame(self.ui_root, padding="30 12 30 12")
+        card_frame.grid()
+        number_of_cards_per_row = 5
+
+        for card_n in range(10):
+            card = self.deck.give_random_card()
+            row = int(card_n / number_of_cards_per_row)
+            ttk.Label(card_frame, width=15, image=card.tk_img).grid(column=card_n % number_of_cards_per_row, row=row)
+        self.ui_root.mainloop()
+
         for i in range(self.n_players):
             self.players.append(Player(self.ask_player_name(i + 1)))
 
