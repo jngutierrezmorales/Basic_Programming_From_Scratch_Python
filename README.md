@@ -1,8 +1,8 @@
 # Programación básica desde cero con Python
 
-[B]Curso Iniciación a la programación con Python de Nate Academy:[/B]
+Curso Iniciación a la programación con Python de Nate Academy:
 
-[B]Repositorio de las imágenes de las cartas: https://github.com/hayeah/playing-cards-assets[/B]
+Repositorio de las imágenes de las cartas: https://github.com/hayeah/playing-cards-assets
 
 * 1- Instalando todo lo necesario
 
