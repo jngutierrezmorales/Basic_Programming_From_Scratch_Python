@@ -48,3 +48,8 @@ Curso Iniciación a la programación con Python de Nate Academy:
 23- Blackjack: Implementando el juego
 
 24- Añadiendo jugadores a Blackjack
+
+25- Creando la UI del Blackjack
+
+
+**Repositorio de las imágenes de las cartas: https://github.com/hayeah/playing-cards-assets
