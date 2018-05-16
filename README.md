@@ -1,5 +1,5 @@
 # Programación básica desde cero con Python
-Curso Iniciación a la programación con Python de Nate Academy:
+* Curso Iniciación a la programación con Python de Nate Academy:
 
 1- Instalando todo lo necesario
 
