@@ -4,9 +4,7 @@
 
 * Repositorio de las imágenes de las cartas: https://github.com/hayeah/playing-cards-assets
 
-
-
-1- Instalando todo lo necesario
+* 1- Instalando todo lo necesario
 
 2- Trabajando con GitHub a través de Pycharm
 
