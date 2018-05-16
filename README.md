@@ -54,4 +54,4 @@
 25- Creando la UI del Blackjack
 ```
 #### Curso de Nate Academy: https://academy.nategentile.com/
-#### Repositorio de las imágenes de las cartas: https://github.com/hayeah/playing-cards-assets
+#### Repositorio de las imágenes de las cartas del Blackjack: https://github.com/hayeah/playing-cards-assets
