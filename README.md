@@ -51,7 +51,13 @@
 
 24- Añadiendo jugadores a Blackjack
 
-25- Creando la UI del Blackjack
+25- Blackjack 2: El diseño
+
+26- Blackjack 2: La clase Blackjack
+
+27- Blackjack 2: Programando la interfaz de usuario
+
+28- Blackjack 2: La clase final
 ```
 #### Curso de Nate Academy: https://academy.nategentile.com/
 #### Repositorio de las imágenes de las cartas del Blackjack: https://github.com/hayeah/playing-cards-assets
