@@ -1,4 +1,4 @@
-import rando
+import random
 from tkinter import Tk, ttk
 from tkinter import *
 from tkinter.messagebox import showinfo
