@@ -59,5 +59,4 @@
 
 28- Blackjack 2: La clase final
 ```
-#### Curso de Nate Academy: https://academy.nategentile.com/
 #### Repositorio de las imágenes de las cartas del Blackjack: https://github.com/hayeah/playing-cards-assets
